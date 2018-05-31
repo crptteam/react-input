@@ -1,0 +1,771 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Should renders without problems 1`] = `
+<Input
+  defaultValue=""
+  disabled={false}
+  isError={false}
+  placeholder="I am an input"
+  theme={
+    Object {
+      "InputElem": Object {
+        "background": "rgba(0,0,0,0)",
+        "disabled": Object {
+          "color": "#abadb6",
+          "cursor": "not-allowed",
+          "placeholderColor": "#ACADB5",
+        },
+        "error": Object {
+          "color": "#212C42",
+          "cursor": "text",
+          "placeholderColor": "#ACADB5",
+        },
+        "fontSize": "16px",
+        "fontWeight": 200,
+        "height": "24px",
+        "main": Object {
+          "color": "#212C42",
+          "cursor": "text",
+          "placeholderColor": "#ACADB5",
+        },
+      },
+      "InputWrap": Object {
+        "borderRadius": "2px",
+        "disabled": Object {
+          "background": "#f7f9f9",
+          "border": "1px solid #ABADB5",
+          "cursor": "not-allowed",
+        },
+        "error": Object {
+          "background": "#FFEBEB",
+          "border": "1px solid #FF3C21",
+          "cursor": "normal",
+        },
+        "height": "64px",
+        "main": Object {
+          "background": "#FFFFFF",
+          "border": "1px solid #ABADB5",
+          "cursor": "normal",
+        },
+        "paddingLeft": "16px",
+        "paddingRight": "16px",
+      },
+      "Placeholder": Object {
+        "disabled": Object {
+          "color": "#abadb6",
+        },
+        "error": Object {
+          "color": "#abadb6",
+        },
+        "focused": Object {
+          "fontSize": "14px",
+          "height": "14px",
+          "top": "11px",
+        },
+        "fontWeight": 200,
+        "main": Object {
+          "color": "#abadb6",
+        },
+        "normal": Object {
+          "fontSize": "16px",
+          "height": "24px",
+          "top": "19px",
+        },
+      },
+      "background": Object {
+        "disabled": "#FFFFFF",
+        "error": "#FFEBEB",
+        "normal": "#FFFFFF",
+      },
+      "border": Object {
+        "disabled": "1px solid #ABADB5",
+        "error": "1px solid #FF3C21",
+        "normal": "1px solid #ABADB5",
+      },
+      "borderRadius": "2px",
+      "color": Object {
+        "disabled": "#212C42",
+        "error": "#212C42",
+        "normal": "#212C42",
+      },
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "height": "64px",
+      "placeholder": Object {
+        "disabled": "#ACADB5",
+        "error": "#ACADB5",
+        "normal": "#ACADB5",
+      },
+    }
+  }
+>
+  <InputWrap
+    component="Input"
+    defaultValue=""
+    disabled={false}
+    isError={false}
+    placeholder="I am an input"
+    theme={
+      Object {
+        "InputElem": Object {
+          "background": "rgba(0,0,0,0)",
+          "disabled": Object {
+            "color": "#abadb6",
+            "cursor": "not-allowed",
+            "placeholderColor": "#ACADB5",
+          },
+          "error": Object {
+            "color": "#212C42",
+            "cursor": "text",
+            "placeholderColor": "#ACADB5",
+          },
+          "fontSize": "16px",
+          "fontWeight": 200,
+          "height": "24px",
+          "main": Object {
+            "color": "#212C42",
+            "cursor": "text",
+            "placeholderColor": "#ACADB5",
+          },
+        },
+        "InputWrap": Object {
+          "borderRadius": "2px",
+          "disabled": Object {
+            "background": "#f7f9f9",
+            "border": "1px solid #ABADB5",
+            "cursor": "not-allowed",
+          },
+          "error": Object {
+            "background": "#FFEBEB",
+            "border": "1px solid #FF3C21",
+            "cursor": "normal",
+          },
+          "height": "64px",
+          "main": Object {
+            "background": "#FFFFFF",
+            "border": "1px solid #ABADB5",
+            "cursor": "normal",
+          },
+          "paddingLeft": "16px",
+          "paddingRight": "16px",
+        },
+        "Placeholder": Object {
+          "disabled": Object {
+            "color": "#abadb6",
+          },
+          "error": Object {
+            "color": "#abadb6",
+          },
+          "focused": Object {
+            "fontSize": "14px",
+            "height": "14px",
+            "top": "11px",
+          },
+          "fontWeight": 200,
+          "main": Object {
+            "color": "#abadb6",
+          },
+          "normal": Object {
+            "fontSize": "16px",
+            "height": "24px",
+            "top": "19px",
+          },
+        },
+        "background": Object {
+          "disabled": "#FFFFFF",
+          "error": "#FFEBEB",
+          "normal": "#FFFFFF",
+        },
+        "border": Object {
+          "disabled": "1px solid #ABADB5",
+          "error": "1px solid #FF3C21",
+          "normal": "1px solid #ABADB5",
+        },
+        "borderRadius": "2px",
+        "color": Object {
+          "disabled": "#212C42",
+          "error": "#212C42",
+          "normal": "#212C42",
+        },
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "height": "64px",
+        "placeholder": Object {
+          "disabled": "#ACADB5",
+          "error": "#ACADB5",
+          "normal": "#ACADB5",
+        },
+      }
+    }
+  >
+    <InputWrap__Elem
+      background="#FFFFFF"
+      border="1px solid #ABADB5"
+      borderRadius="2px"
+      component="Input"
+      cursor="normal"
+      defaultValue=""
+      disabled={false}
+      fontSize="16px"
+      fontWeight={400}
+      height="64px"
+      isError={false}
+      paddingLeft="16px"
+      paddingRight="16px"
+      placeholder="I am an input"
+      theme={
+        Object {
+          "InputElem": Object {
+            "background": "rgba(0,0,0,0)",
+            "disabled": Object {
+              "color": "#abadb6",
+              "cursor": "not-allowed",
+              "placeholderColor": "#ACADB5",
+            },
+            "error": Object {
+              "color": "#212C42",
+              "cursor": "text",
+              "placeholderColor": "#ACADB5",
+            },
+            "fontSize": "16px",
+            "fontWeight": 200,
+            "height": "24px",
+            "main": Object {
+              "color": "#212C42",
+              "cursor": "text",
+              "placeholderColor": "#ACADB5",
+            },
+          },
+          "InputWrap": Object {
+            "borderRadius": "2px",
+            "disabled": Object {
+              "background": "#f7f9f9",
+              "border": "1px solid #ABADB5",
+              "cursor": "not-allowed",
+            },
+            "error": Object {
+              "background": "#FFEBEB",
+              "border": "1px solid #FF3C21",
+              "cursor": "normal",
+            },
+            "height": "64px",
+            "main": Object {
+              "background": "#FFFFFF",
+              "border": "1px solid #ABADB5",
+              "cursor": "normal",
+            },
+            "paddingLeft": "16px",
+            "paddingRight": "16px",
+          },
+          "Placeholder": Object {
+            "disabled": Object {
+              "color": "#abadb6",
+            },
+            "error": Object {
+              "color": "#abadb6",
+            },
+            "focused": Object {
+              "fontSize": "14px",
+              "height": "14px",
+              "top": "11px",
+            },
+            "fontWeight": 200,
+            "main": Object {
+              "color": "#abadb6",
+            },
+            "normal": Object {
+              "fontSize": "16px",
+              "height": "24px",
+              "top": "19px",
+            },
+          },
+          "background": Object {
+            "disabled": "#FFFFFF",
+            "error": "#FFEBEB",
+            "normal": "#FFFFFF",
+          },
+          "border": Object {
+            "disabled": "1px solid #ABADB5",
+            "error": "1px solid #FF3C21",
+            "normal": "1px solid #ABADB5",
+          },
+          "borderRadius": "2px",
+          "color": Object {
+            "disabled": "#212C42",
+            "error": "#212C42",
+            "normal": "#212C42",
+          },
+          "fontSize": "16px",
+          "fontWeight": 400,
+          "height": "64px",
+          "placeholder": Object {
+            "disabled": "#ACADB5",
+            "error": "#ACADB5",
+            "normal": "#ACADB5",
+          },
+        }
+      }
+    >
+      <label
+        className="InputWrap__Elem-ieLiHj bAWpqP"
+        cursor="normal"
+        defaultValue=""
+        disabled={false}
+        fontSize="16px"
+        fontWeight={400}
+        height="64px"
+        placeholder="I am an input"
+      >
+        <Placeholder
+          disabled={false}
+          focused=""
+          isError={false}
+          theme={
+            Object {
+              "InputElem": Object {
+                "background": "rgba(0,0,0,0)",
+                "disabled": Object {
+                  "color": "#abadb6",
+                  "cursor": "not-allowed",
+                  "placeholderColor": "#ACADB5",
+                },
+                "error": Object {
+                  "color": "#212C42",
+                  "cursor": "text",
+                  "placeholderColor": "#ACADB5",
+                },
+                "fontSize": "16px",
+                "fontWeight": 200,
+                "height": "24px",
+                "main": Object {
+                  "color": "#212C42",
+                  "cursor": "text",
+                  "placeholderColor": "#ACADB5",
+                },
+              },
+              "InputWrap": Object {
+                "borderRadius": "2px",
+                "disabled": Object {
+                  "background": "#f7f9f9",
+                  "border": "1px solid #ABADB5",
+                  "cursor": "not-allowed",
+                },
+                "error": Object {
+                  "background": "#FFEBEB",
+                  "border": "1px solid #FF3C21",
+                  "cursor": "normal",
+                },
+                "height": "64px",
+                "main": Object {
+                  "background": "#FFFFFF",
+                  "border": "1px solid #ABADB5",
+                  "cursor": "normal",
+                },
+                "paddingLeft": "16px",
+                "paddingRight": "16px",
+              },
+              "Placeholder": Object {
+                "disabled": Object {
+                  "color": "#abadb6",
+                },
+                "error": Object {
+                  "color": "#abadb6",
+                },
+                "focused": Object {
+                  "fontSize": "14px",
+                  "height": "14px",
+                  "top": "11px",
+                },
+                "fontWeight": 200,
+                "main": Object {
+                  "color": "#abadb6",
+                },
+                "normal": Object {
+                  "fontSize": "16px",
+                  "height": "24px",
+                  "top": "19px",
+                },
+              },
+              "background": Object {
+                "disabled": "#FFFFFF",
+                "error": "#FFEBEB",
+                "normal": "#FFFFFF",
+              },
+              "border": Object {
+                "disabled": "1px solid #ABADB5",
+                "error": "1px solid #FF3C21",
+                "normal": "1px solid #ABADB5",
+              },
+              "borderRadius": "2px",
+              "color": Object {
+                "disabled": "#212C42",
+                "error": "#212C42",
+                "normal": "#212C42",
+              },
+              "fontSize": "16px",
+              "fontWeight": 400,
+              "height": "64px",
+              "placeholder": Object {
+                "disabled": "#ACADB5",
+                "error": "#ACADB5",
+                "normal": "#ACADB5",
+              },
+            }
+          }
+        >
+          <Placeholder__Elem
+            borderRadius="2px"
+            color="#abadb6"
+            disabled={false}
+            focused=""
+            fontSize="16px"
+            fontWeight={200}
+            height="24px"
+            isError={false}
+            theme={
+              Object {
+                "InputElem": Object {
+                  "background": "rgba(0,0,0,0)",
+                  "disabled": Object {
+                    "color": "#abadb6",
+                    "cursor": "not-allowed",
+                    "placeholderColor": "#ACADB5",
+                  },
+                  "error": Object {
+                    "color": "#212C42",
+                    "cursor": "text",
+                    "placeholderColor": "#ACADB5",
+                  },
+                  "fontSize": "16px",
+                  "fontWeight": 200,
+                  "height": "24px",
+                  "main": Object {
+                    "color": "#212C42",
+                    "cursor": "text",
+                    "placeholderColor": "#ACADB5",
+                  },
+                },
+                "InputWrap": Object {
+                  "borderRadius": "2px",
+                  "disabled": Object {
+                    "background": "#f7f9f9",
+                    "border": "1px solid #ABADB5",
+                    "cursor": "not-allowed",
+                  },
+                  "error": Object {
+                    "background": "#FFEBEB",
+                    "border": "1px solid #FF3C21",
+                    "cursor": "normal",
+                  },
+                  "height": "64px",
+                  "main": Object {
+                    "background": "#FFFFFF",
+                    "border": "1px solid #ABADB5",
+                    "cursor": "normal",
+                  },
+                  "paddingLeft": "16px",
+                  "paddingRight": "16px",
+                },
+                "Placeholder": Object {
+                  "disabled": Object {
+                    "color": "#abadb6",
+                  },
+                  "error": Object {
+                    "color": "#abadb6",
+                  },
+                  "focused": Object {
+                    "fontSize": "14px",
+                    "height": "14px",
+                    "top": "11px",
+                  },
+                  "fontWeight": 200,
+                  "main": Object {
+                    "color": "#abadb6",
+                  },
+                  "normal": Object {
+                    "fontSize": "16px",
+                    "height": "24px",
+                    "top": "19px",
+                  },
+                },
+                "background": Object {
+                  "disabled": "#FFFFFF",
+                  "error": "#FFEBEB",
+                  "normal": "#FFFFFF",
+                },
+                "border": Object {
+                  "disabled": "1px solid #ABADB5",
+                  "error": "1px solid #FF3C21",
+                  "normal": "1px solid #ABADB5",
+                },
+                "borderRadius": "2px",
+                "color": Object {
+                  "disabled": "#212C42",
+                  "error": "#212C42",
+                  "normal": "#212C42",
+                },
+                "fontSize": "16px",
+                "fontWeight": 400,
+                "height": "64px",
+                "placeholder": Object {
+                  "disabled": "#ACADB5",
+                  "error": "#ACADB5",
+                  "normal": "#ACADB5",
+                },
+              }
+            }
+            top="19px"
+          >
+            <div
+              className="Placeholder__Elem-fWwTVe heFVEG"
+              color="#abadb6"
+              disabled={false}
+              fontSize="16px"
+              fontWeight={200}
+              height="24px"
+            >
+              I am an input
+            </div>
+          </Placeholder__Elem>
+        </Placeholder>
+        <InputContentWrap>
+          <InputContentWrap__Elem>
+            <div
+              className="InputContentWrap__Elem-fJNQWd jERbNT"
+            >
+              <InputElem
+                component="Input"
+                disabled={false}
+                innerRef={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyPress={[Function]}
+                theme={
+                  Object {
+                    "InputElem": Object {
+                      "background": "rgba(0,0,0,0)",
+                      "disabled": Object {
+                        "color": "#abadb6",
+                        "cursor": "not-allowed",
+                        "placeholderColor": "#ACADB5",
+                      },
+                      "error": Object {
+                        "color": "#212C42",
+                        "cursor": "text",
+                        "placeholderColor": "#ACADB5",
+                      },
+                      "fontSize": "16px",
+                      "fontWeight": 200,
+                      "height": "24px",
+                      "main": Object {
+                        "color": "#212C42",
+                        "cursor": "text",
+                        "placeholderColor": "#ACADB5",
+                      },
+                    },
+                    "InputWrap": Object {
+                      "borderRadius": "2px",
+                      "disabled": Object {
+                        "background": "#f7f9f9",
+                        "border": "1px solid #ABADB5",
+                        "cursor": "not-allowed",
+                      },
+                      "error": Object {
+                        "background": "#FFEBEB",
+                        "border": "1px solid #FF3C21",
+                        "cursor": "normal",
+                      },
+                      "height": "64px",
+                      "main": Object {
+                        "background": "#FFFFFF",
+                        "border": "1px solid #ABADB5",
+                        "cursor": "normal",
+                      },
+                      "paddingLeft": "16px",
+                      "paddingRight": "16px",
+                    },
+                    "Placeholder": Object {
+                      "disabled": Object {
+                        "color": "#abadb6",
+                      },
+                      "error": Object {
+                        "color": "#abadb6",
+                      },
+                      "focused": Object {
+                        "fontSize": "14px",
+                        "height": "14px",
+                        "top": "11px",
+                      },
+                      "fontWeight": 200,
+                      "main": Object {
+                        "color": "#abadb6",
+                      },
+                      "normal": Object {
+                        "fontSize": "16px",
+                        "height": "24px",
+                        "top": "19px",
+                      },
+                    },
+                    "background": Object {
+                      "disabled": "#FFFFFF",
+                      "error": "#FFEBEB",
+                      "normal": "#FFFFFF",
+                    },
+                    "border": Object {
+                      "disabled": "1px solid #ABADB5",
+                      "error": "1px solid #FF3C21",
+                      "normal": "1px solid #ABADB5",
+                    },
+                    "borderRadius": "2px",
+                    "color": Object {
+                      "disabled": "#212C42",
+                      "error": "#212C42",
+                      "normal": "#212C42",
+                    },
+                    "fontSize": "16px",
+                    "fontWeight": 400,
+                    "height": "64px",
+                    "placeholder": Object {
+                      "disabled": "#ACADB5",
+                      "error": "#ACADB5",
+                      "normal": "#ACADB5",
+                    },
+                  }
+                }
+                value=""
+              >
+                <InputElem__Elem
+                  background="rgba(0,0,0,0)"
+                  borderRadius="2px"
+                  color="#212C42"
+                  component="Input"
+                  cursor="text"
+                  disabled={false}
+                  fontSize="16px"
+                  fontWeight={200}
+                  height="24px"
+                  innerRef={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyPress={[Function]}
+                  placeholderColor="#ACADB5"
+                  theme={
+                    Object {
+                      "InputElem": Object {
+                        "background": "rgba(0,0,0,0)",
+                        "disabled": Object {
+                          "color": "#abadb6",
+                          "cursor": "not-allowed",
+                          "placeholderColor": "#ACADB5",
+                        },
+                        "error": Object {
+                          "color": "#212C42",
+                          "cursor": "text",
+                          "placeholderColor": "#ACADB5",
+                        },
+                        "fontSize": "16px",
+                        "fontWeight": 200,
+                        "height": "24px",
+                        "main": Object {
+                          "color": "#212C42",
+                          "cursor": "text",
+                          "placeholderColor": "#ACADB5",
+                        },
+                      },
+                      "InputWrap": Object {
+                        "borderRadius": "2px",
+                        "disabled": Object {
+                          "background": "#f7f9f9",
+                          "border": "1px solid #ABADB5",
+                          "cursor": "not-allowed",
+                        },
+                        "error": Object {
+                          "background": "#FFEBEB",
+                          "border": "1px solid #FF3C21",
+                          "cursor": "normal",
+                        },
+                        "height": "64px",
+                        "main": Object {
+                          "background": "#FFFFFF",
+                          "border": "1px solid #ABADB5",
+                          "cursor": "normal",
+                        },
+                        "paddingLeft": "16px",
+                        "paddingRight": "16px",
+                      },
+                      "Placeholder": Object {
+                        "disabled": Object {
+                          "color": "#abadb6",
+                        },
+                        "error": Object {
+                          "color": "#abadb6",
+                        },
+                        "focused": Object {
+                          "fontSize": "14px",
+                          "height": "14px",
+                          "top": "11px",
+                        },
+                        "fontWeight": 200,
+                        "main": Object {
+                          "color": "#abadb6",
+                        },
+                        "normal": Object {
+                          "fontSize": "16px",
+                          "height": "24px",
+                          "top": "19px",
+                        },
+                      },
+                      "background": Object {
+                        "disabled": "#FFFFFF",
+                        "error": "#FFEBEB",
+                        "normal": "#FFFFFF",
+                      },
+                      "border": Object {
+                        "disabled": "1px solid #ABADB5",
+                        "error": "1px solid #FF3C21",
+                        "normal": "1px solid #ABADB5",
+                      },
+                      "borderRadius": "2px",
+                      "color": Object {
+                        "disabled": "#212C42",
+                        "error": "#212C42",
+                        "normal": "#212C42",
+                      },
+                      "fontSize": "16px",
+                      "fontWeight": 400,
+                      "height": "64px",
+                      "placeholder": Object {
+                        "disabled": "#ACADB5",
+                        "error": "#ACADB5",
+                        "normal": "#ACADB5",
+                      },
+                    }
+                  }
+                  value=""
+                >
+                  <input
+                    className="InputElem__Elem-hSMfjd eltNSU"
+                    color="#212C42"
+                    cursor="text"
+                    disabled={false}
+                    fontSize="16px"
+                    fontWeight={200}
+                    height="24px"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyPress={[Function]}
+                    value=""
+                  />
+                </InputElem__Elem>
+              </InputElem>
+            </div>
+          </InputContentWrap__Elem>
+        </InputContentWrap>
+      </label>
+    </InputWrap__Elem>
+  </InputWrap>
+</Input>
+`;
