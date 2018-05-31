@@ -17,7 +17,7 @@ import { Input } from  "@crpt/react-input";
 
 ```
 
-| PropName | Описание | Пример |
+| PropName | Description | Example |
 |---|---|---|
 | disabled: Boolean  | Can be disabled. |  `<Input disabled />` |
 | isError: Boolean | Changes colors to error. |  `<Input isError={true} />` |
