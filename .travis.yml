@@ -18,6 +18,7 @@ branches:
 
 deploy:
   provider: npm
+  skip_cleanup: true
   email: nikitosgroover@gmail.com
   api_key: $NPM_TOKEN
   tag: latest
