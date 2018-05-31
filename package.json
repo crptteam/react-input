@@ -1,5 +1,5 @@
 {
-  "name": "react-input",
+  "name": "@crpt/react-input",
   "version": "1.0.1",
   "description": "react-input React component",
   "main": "lib/index.js",
