@@ -13,6 +13,9 @@
     "test:coverage": "NODE_ENV=test jest --coverage",
     "test:watch": "NODE_ENV=test jest --watch"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "styled-components": "1.4.6 - 3"
   },
