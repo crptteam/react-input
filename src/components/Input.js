@@ -135,7 +135,7 @@ Input.propTypes = {
   theme: PropTypes.object,
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
-  placeholder: PropTypes.string,
+  placeholder: PropTypes.oneOf([PropTypes.string, PropTypes.element]),
   defaultValue: PropTypes.string,
   isError: PropTypes.bool,
   onUpdate: PropTypes.func,
