@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import InputWrap from '../styled/InputWrap';
-import InputContentWrap from '../styled/InputContentWrap';
-import InputElem from '../styled/InputElem';
-import Placeholder from '../styled/Placeholder';
-import RightIconWrap from '../styled/RightIconWrap';
+import InputWrap from "../styled/InputWrap";
+import InputContentWrap from "../styled/InputContentWrap";
+import InputElem from "../styled/InputElem";
+import Placeholder from "../styled/Placeholder";
+import RightIconWrap from "../styled/RightIconWrap";
 
-import defaultTheme from '../theme/defaultTheme';
+import defaultTheme from "../theme/defaultTheme";
 
 class Input extends Component {
   input;
@@ -15,8 +15,7 @@ class Input extends Component {
   constructor(props) {
     super(props);
 
-
-    const value = this.props.defaultValue || '';
+    const value = this.props.defaultValue || "";
 
     this.state = {
       isFocused: !!value.length,
@@ -41,23 +40,25 @@ class Input extends Component {
   }
 
   onKeyPress(e) {
-    if (e.charCode === 13 || e.keyCode === 13 || e.key == 'Enter') {
+    if (e.charCode === 13 || e.keyCode === 13 || e.key == "Enter") {
       this.props.onUpdate && this.props.onUpdate(this.state.value);
     }
   }
 
   clear() {
     this.setState({
-      value: ''
+      value: ""
     });
-    this.props.onUpdate && this.props.onUpdate('');
-    this.props.onChange && this.props.onChange('');
+    this.props.onUpdate && this.props.onUpdate("");
+    this.props.onChange && this.props.onChange("");
   }
 
   onFocus(e) {
     this.setState({
       isFocused: true
     });
+
+    this.props.onFocus && this.props.onFocus(this.state.value);
   }
 
   onBlur(e) {
@@ -68,6 +69,7 @@ class Input extends Component {
     }
 
     this.props.onUpdate && this.props.onUpdate(this.state.value);
+    this.props.onBlur && this.props.onBlur(this.state.value);
   }
 
   onChange(e) {
@@ -88,16 +90,12 @@ class Input extends Component {
       rightIcon,
       name,
       onChange,
+      onBlur,
+      onFocus,
       ...otherProps
     } = this.props;
 
-
-
-    const rIcon = rightIcon ? (
-      <RightIconWrap>
-        {rightIcon}
-      </RightIconWrap>
-    ) : null;
+    const rIcon = rightIcon ? <RightIconWrap>{rightIcon}</RightIconWrap> : null;
 
     return (
       <InputWrap disabled={disabled} {...otherProps} component="Input">
@@ -115,7 +113,7 @@ class Input extends Component {
             onChange={this.onChange}
             onBlur={this.onBlur}
             onKeyPress={this.onKeyPress}
-            value={this.state.value ? this.state.value : ''}
+            value={this.state.value ? this.state.value : ""}
             disabled={disabled}
             type={type}
             name={name}
@@ -135,7 +133,7 @@ Input.propTypes = {
   theme: PropTypes.object,
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
-  placeholder: PropTypes.oneOf([PropTypes.string, PropTypes.element]),
+  placeholder: PropTypes.any,
   defaultValue: PropTypes.string,
   isError: PropTypes.bool,
   onUpdate: PropTypes.func,
@@ -144,12 +142,12 @@ Input.propTypes = {
 
 Input.defaultProps = {
   disabled: false,
-  placeholder: '',
-  defaultValue: '',
+  placeholder: "",
+  defaultValue: "",
   isError: false,
   theme: defaultTheme
 };
 
-Input.displayName = 'Input';
+Input.displayName = "Input";
 
 export default Input;
