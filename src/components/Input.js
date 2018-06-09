@@ -68,6 +68,7 @@ class Input extends Component {
     }
 
     this.props.onUpdate && this.props.onUpdate(this.state.value);
+    this.props.onBlur && this.props.onBlur(this.state.value);
   }
 
   onChange(e) {
@@ -88,6 +89,7 @@ class Input extends Component {
       rightIcon,
       name,
       onChange,
+      onBlur,
       ...otherProps
     } = this.props;
 
@@ -135,7 +137,7 @@ Input.propTypes = {
   theme: PropTypes.object,
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
-  placeholder: PropTypes.oneOf([PropTypes.string, PropTypes.element]),
+  placeholder: PropTypes.any,
   defaultValue: PropTypes.string,
   isError: PropTypes.bool,
   onUpdate: PropTypes.func,
