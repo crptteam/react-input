@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
+import { withTheme } from "styled-components";
 import InputWrap from "../styled/InputWrap";
 import InputContentWrap from "../styled/InputContentWrap";
 import InputElem from "../styled/InputElem";
@@ -150,4 +150,4 @@ Input.defaultProps = {
 
 Input.displayName = "Input";
 
-export default Input;
+export default withTheme(Input);

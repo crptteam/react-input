@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { getThemeAsPlainTextByKeys } from '../utils';
-import defaultTheme from '../theme/defaultTheme';
+import { getThemeAsPlainTextByKeys, innerMerge } from "../utils";
+import defaultTheme from "../theme/defaultTheme";
 
 const Elem = styled.div`
   display: block;
@@ -18,14 +18,28 @@ const Elem = styled.div`
 `;
 
 const Placeholder = props => {
-  const theme = getThemeAsPlainTextByKeys(props.theme || defaultTheme);
+  const merged = innerMerge(
+    {},
+    defaultTheme.Input,
+    props.theme && props.theme.Input ? props.theme.Input : {}
+  );
+
+  const theme = getThemeAsPlainTextByKeys(merged);
+
+  const mergedPlaceholder = innerMerge(
+    {},
+    (defaultTheme.Input && defaultTheme.Input.Placeholder) || {},
+    (props.theme && props.theme.Input && props.theme.Input.Placeholder) || {}
+  );
+
+  const key = props.disabled ? "disabled" : props.isError ? "error" : "main";
 
   Object.assign(
     theme,
     getThemeAsPlainTextByKeys(
-      (props.theme && props.theme.Placeholder) || defaultTheme.Placeholder,
-      props.disabled ? 'disabled' : props.isError ? 'error' : 'main',
-      props.focused ? 'focused' : 'normal'
+      mergedPlaceholder,
+      key,
+      props.focused ? "focused" : "normal"
     )
   );
 
