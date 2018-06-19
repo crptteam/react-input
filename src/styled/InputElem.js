@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { getThemeAsPlainTextByKeys, innerMerge } from "../utils";
+import { getThemeAsPlainObjectByKeys, innerMerge } from "../utils";
 import defaultTheme from "../theme/defaultTheme";
 
 const Elem = styled.input`
@@ -40,17 +40,17 @@ const InputElem = props => {
     props.theme && props.theme.Input ? props.theme.Input : {}
   );
 
-  const theme = getThemeAsPlainTextByKeys(merged);
+  const theme = getThemeAsPlainObjectByKeys(merged);
 
   const mergedInputElem = innerMerge(
     {},
-    (defaultTheme.Input && defaultTheme.Input.InputElem) || {},
+    defaultTheme.Input.InputElem,
     (props.theme && props.theme.Input && props.theme.Input.InputElem) || {}
   );
 
   const key = props.disabled ? "disabled" : props.isError ? "error" : "main";
 
-  Object.assign(theme, getThemeAsPlainTextByKeys(mergedInputElem, key));
+  Object.assign(theme, getThemeAsPlainObjectByKeys(mergedInputElem, key));
 
   return <Elem {...theme} {...props} />;
 };
