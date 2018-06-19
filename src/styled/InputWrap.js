@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { getThemeAsPlainTextByKeys, innerMerge } from "../utils";
+import { getThemeAsPlainObjectByKeys, innerMerge } from "../utils";
 import defaultTheme from "../theme/defaultTheme";
 
 const Elem = styled.label`
@@ -28,17 +28,17 @@ const InputWrap = props => {
     props.theme && props.theme.Input ? props.theme.Input : {}
   );
 
-  const theme = getThemeAsPlainTextByKeys(merged);
+  const theme = getThemeAsPlainObjectByKeys(merged);
 
   const mergedInputWrap = innerMerge(
     {},
-    (defaultTheme.Input && defaultTheme.Input.InputElem) || {},
-    (props.theme && props.theme.Input && props.theme.Input.InputElem) || {}
+    defaultTheme.Input.InputWrap,
+    (props.theme && props.theme.Input && props.theme.Input.InputWrap) || {}
   );
 
   const key = props.disabled ? "disabled" : props.isError ? "error" : "main";
 
-  Object.assign(theme, getThemeAsPlainTextByKeys(mergedInputWrap, key));
+  Object.assign(theme, getThemeAsPlainObjectByKeys(mergedInputWrap, key));
 
   return <Elem {...theme} {...props} />;
 };

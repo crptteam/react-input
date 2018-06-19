@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { getThemeAsPlainTextByKeys, innerMerge } from "../utils";
+import { getThemeAsPlainObjectByKeys, innerMerge } from "../utils";
 import defaultTheme from "../theme/defaultTheme";
 
 const Elem = styled.div`
@@ -24,11 +24,11 @@ const Placeholder = props => {
     props.theme && props.theme.Input ? props.theme.Input : {}
   );
 
-  const theme = getThemeAsPlainTextByKeys(merged);
+  const theme = getThemeAsPlainObjectByKeys(merged);
 
   const mergedPlaceholder = innerMerge(
     {},
-    (defaultTheme.Input && defaultTheme.Input.Placeholder) || {},
+    defaultTheme.Input.Placeholder,
     (props.theme && props.theme.Input && props.theme.Input.Placeholder) || {}
   );
 
@@ -36,7 +36,7 @@ const Placeholder = props => {
 
   Object.assign(
     theme,
-    getThemeAsPlainTextByKeys(
+    getThemeAsPlainObjectByKeys(
       mergedPlaceholder,
       key,
       props.focused ? "focused" : "normal"
