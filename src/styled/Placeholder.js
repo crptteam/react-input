@@ -15,6 +15,27 @@ const Elem = styled.div`
   top: ${props => props.top};
   font-family: ${props => props.fontFamily};
   transition: all 0.3s ease;
+  padding: 0 17px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  ${({ focused }) => {
+    if (focused)
+      return `
+				white-space: nowrap;
+				align-items: flex-start;
+				padding: 11px 17px;
+				overflow: hidden;
+				justify-content: flex-start;
+				width: calc(100% - 17px);
+	`;
+  }};
 `;
 
 const Placeholder = props => {
