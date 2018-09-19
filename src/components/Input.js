@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import Inputmask from "inputmask";
 import { withTheme } from "styled-components";
 import InputWrap from "../styled/InputWrap";
 import InputContentWrap from "../styled/InputContentWrap";
@@ -11,6 +12,8 @@ import defaultTheme from "../theme/defaultTheme";
 
 class Input extends Component {
   input;
+  inputMask;
+  im;
 
   constructor(props) {
     super(props);
@@ -21,6 +24,10 @@ class Input extends Component {
       isFocused: !!value.length,
       value
     };
+
+    if (this.props.mask) {
+      this.im = new Inputmask(this.props.mask);
+    }
 
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
@@ -33,6 +40,7 @@ class Input extends Component {
       isFocused: this.input.value && this.input.value.length
     });
     this.props.onRef && this.props.onRef(this);
+    if (this.im) this.inputMask = this.im.mask(this.input);
   }
 
   componentWillUnmount() {
@@ -137,7 +145,8 @@ Input.propTypes = {
   defaultValue: PropTypes.string,
   isError: PropTypes.bool,
   onUpdate: PropTypes.func,
-  rightIcon: PropTypes.any
+  rightIcon: PropTypes.any,
+  mask: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -145,7 +154,8 @@ Input.defaultProps = {
   placeholder: "",
   defaultValue: "",
   isError: false,
-  theme: defaultTheme
+  theme: defaultTheme,
+  mask: null,
 };
 
 Input.displayName = "Input";

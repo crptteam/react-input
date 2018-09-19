@@ -1,6 +1,6 @@
 {
   "name": "@crpt/react-input",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "react-input React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,6 +23,7 @@
     "access": "public"
   },
   "dependencies": {
+    "inputmask": "^4.0.2",
     "styled-components": "1.4.6 - 3"
   },
   "peerDependencies": {
