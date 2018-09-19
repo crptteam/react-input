@@ -23,6 +23,7 @@
     "access": "public"
   },
   "dependencies": {
+    "inputmask": "^4.0.2",
     "styled-components": "1.4.6 - 3"
   },
   "peerDependencies": {
