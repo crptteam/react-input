@@ -25,3 +25,7 @@ export function innerMerge(obj, ...others) {
 
   return obj;
 }
+
+export function hasOnlyDigits(value) {
+  return /^-{0,1}\d+$/.test(value);
+}
