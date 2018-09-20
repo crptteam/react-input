@@ -1,17 +1,17 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React from "react";
+import { render } from "react-dom";
+import { hasOnlyDigits } from "../../src/utils";
+import Example from "../../src";
 
-import Example from '../../src';
-
-const Demo = (props) => (
+const Demo = props => (
   <div>
     <h1>react-input Demo</h1>
     <Example
       placeholder="Телефон"
-      mask="+7 (999) 999-99-99"
-      onChange={(e) => console.log(e)}
+      validate={val => hasOnlyDigits(val)}
+      onChange={e => console.log(e)}
     />
   </div>
 );
 
-render(<Demo />, document.querySelector('#demo'));
+render(<Demo />, document.querySelector("#demo"));

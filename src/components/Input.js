@@ -81,6 +81,10 @@ class Input extends Component {
   }
 
   onChange(e) {
+    if (this.props.validate) {
+      if (!this.props.validate(e.target.value)) return;
+    }
+
     this.props.onChange && this.props.onChange(e.target.value);
 
     const value = e.target.value;
@@ -147,6 +151,7 @@ Input.propTypes = {
   onUpdate: PropTypes.func,
   rightIcon: PropTypes.any,
   mask: PropTypes.string,
+  validate: PropTypes.func,
 };
 
 Input.defaultProps = {
