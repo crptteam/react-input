@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import Inputmask from "inputmask";
-import { withTheme } from "styled-components";
-import InputWrap from "../styled/InputWrap";
-import InputContentWrap from "../styled/InputContentWrap";
-import InputElem from "../styled/InputElem";
-import Placeholder from "../styled/Placeholder";
-import RightIconWrap from "../styled/RightIconWrap";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Inputmask from 'inputmask';
+import { withTheme } from 'styled-components';
+import InputWrap from '../styled/InputWrap';
+import InputContentWrap from '../styled/InputContentWrap';
+import InputElem from '../styled/InputElem';
+import Placeholder from '../styled/Placeholder';
+import RightIconWrap from '../styled/RightIconWrap';
 
-import defaultTheme from "../theme/defaultTheme";
+import defaultTheme from '../theme/defaultTheme';
 
 class Input extends Component {
   input;
@@ -18,7 +18,7 @@ class Input extends Component {
   constructor(props) {
     super(props);
 
-    const value = this.props.defaultValue || "";
+    const value = this.props.defaultValue || '';
 
     this.state = {
       isFocused: !!value.length,
@@ -48,17 +48,17 @@ class Input extends Component {
   }
 
   onKeyPress(e) {
-    if (e.charCode === 13 || e.keyCode === 13 || e.key == "Enter") {
+    if (e.charCode === 13 || e.keyCode === 13 || e.key == 'Enter') {
       this.props.onUpdate && this.props.onUpdate(this.state.value);
     }
   }
 
   clear() {
     this.setState({
-      value: ""
+      value: ''
     });
-    this.props.onUpdate && this.props.onUpdate("");
-    this.props.onChange && this.props.onChange("");
+    this.props.onUpdate && this.props.onUpdate('');
+    this.props.onChange && this.props.onChange('');
   }
 
   onFocus(e) {
@@ -94,6 +94,15 @@ class Input extends Component {
     });
   }
 
+  componentDidUpdate(prevProps) {
+    const { defaultValue } = this.props;
+    if (defaultValue !== prevProps.defaultValue) {
+      this.setState({
+        value: defaultValue
+      });
+    }
+  }
+
   render() {
     const {
       value,
@@ -125,7 +134,7 @@ class Input extends Component {
             onChange={this.onChange}
             onBlur={this.onBlur}
             onKeyPress={this.onKeyPress}
-            value={this.state.value ? this.state.value : ""}
+            value={this.state.value ? this.state.value : ''}
             disabled={disabled}
             type={type}
             name={name}
@@ -151,18 +160,18 @@ Input.propTypes = {
   onUpdate: PropTypes.func,
   rightIcon: PropTypes.any,
   mask: PropTypes.string,
-  validate: PropTypes.func,
+  validate: PropTypes.func
 };
 
 Input.defaultProps = {
   disabled: false,
-  placeholder: "",
-  defaultValue: "",
+  placeholder: '',
+  defaultValue: '',
   isError: false,
   theme: defaultTheme,
-  mask: null,
+  mask: null
 };
 
-Input.displayName = "Input";
+Input.displayName = 'Input';
 
 export default withTheme(Input);
