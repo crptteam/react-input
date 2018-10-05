@@ -1,35 +1,45 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js test
+  /Users/vadim-zaicev/.nvm/versions/node/v8.11.3/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js add lodash/get
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+  /Users/vadim-zaicev/.npm-global/bin:/Users/vadim-zaicev/.nvm/versions/node/v8.11.3/bin:/usr/local/sbin:/Users/vadim-zaicev/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  8.11.1
+  8.11.3
 
 Platform: 
   darwin x64
 
 npm manifest: 
   {
-    "name": "react-input",
-    "version": "1.0.0",
+    "name": "@crpt/react-input",
+    "version": "1.0.18",
     "description": "react-input React component",
     "main": "lib/index.js",
     "module": "es/index.js",
-    "files": ["css", "es", "lib", "umd"],
+    "files": [
+      "css",
+      "es",
+      "lib",
+      "umd",
+      "src"
+    ],
     "scripts": {
-      "build": "nwb build-react-component",
+      "build": "nwb build-react-component --copy-files",
       "clean": "nwb clean-module && nwb clean-demo",
       "start": "nwb serve-react-demo",
-      "test": "NODE_ENV=test jest",
+      "test": "NODE_ENV=test jest -u --no-cache",
       "test:coverage": "NODE_ENV=test jest --coverage",
       "test:watch": "NODE_ENV=test jest --watch"
     },
+    "publishConfig": {
+      "access": "public"
+    },
     "dependencies": {
+      "inputmask": "^4.0.2",
       "styled-components": "1.4.6 - 3"
     },
     "peerDependencies": {
@@ -62,21 +72,39 @@ npm manifest:
       "babel-preset-react": "^6.24.1",
       "babel-preset-stage-3": "^6.24.1"
     },
-    "contributors": ["Nikita Solomennikov", "Alexander Berezovsky"],
+    "contributors": [
+      "Nikita Solomennikov",
+      "Alexander Berezovsky"
+    ],
     "homepage": "https://github.com/crptteam/react-breadcrumbs",
     "license": "MIT",
     "repository": "https://github.com/crptteam/react-breadcrumbs",
-    "keywords": ["react-component"],
+    "keywords": [
+      "react-component"
+    ],
     "jest": {
-      "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+      "collectCoverageFrom": [
+        "src/**/*.{js,jsx}"
+      ],
       "verbose": true,
-      "transformIgnorePatterns": ["/node_modules/(?!react).+(js|jsx)$"],
-      "moduleDirectories": ["node_modules"],
-      "setupFiles": ["./tests/jestsetup.js"],
-      "snapshotSerializers": ["enzyme-to-json/serializer"]
+      "transformIgnorePatterns": [
+        "/node_modules/(?!react).+(js|jsx)$"
+      ],
+      "moduleDirectories": [
+        "node_modules"
+      ],
+      "setupFiles": [
+        "./tests/jestsetup.js"
+      ],
+      "snapshotSerializers": [
+        "enzyme-to-json/serializer"
+      ]
     },
     "babel": {
-      "presets": ["env", "react"],
+      "presets": [
+        "env",
+        "react"
+      ],
       "plugins": [
         "transform-class-properties",
         "transform-es2015-destructuring",
@@ -97,10 +125,16 @@ npm manifest:
       ],
       "env": {
         "production": {
-          "plugins": ["transform-es2015-modules-commonjs", "inline-react-svg"]
+          "plugins": [
+            "transform-es2015-modules-commonjs",
+            "inline-react-svg"
+          ]
         },
         "test": {
-          "plugins": ["transform-es2015-modules-commonjs", "inline-react-svg"]
+          "plugins": [
+            "transform-es2015-modules-commonjs",
+            "inline-react-svg"
+          ]
         }
       }
     }
@@ -4456,6 +4490,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/inline-source-map/-/inline-source-map-0.6.2.tgz#f9393471c18a79d1724f863fa38b586370ade2a5"
     dependencies:
       source-map "~0.5.3"
+  
+  inputmask@^4.0.2:
+    version "4.0.2"
+    resolved "https://registry.yarnpkg.com/inputmask/-/inputmask-4.0.2.tgz#df85411fabdcad323606a045a055fea90d8d7afe"
   
   inquirer@3.3.0:
     version "3.3.0"
@@ -9417,12 +9455,16 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c NODE_ENV=test jest
+  Exit code: 128
+  Command: git
+  Arguments: ls-remote --tags --heads ssh://git@github.com/lodash/get.git
   Directory: /Users/vadim-zaicev/projects/github-components/react-input
   Output:
+  Host key verification failed.
+  fatal: Could not read from remote repository.
   
+  Please make sure you have the correct access rights
+  and the repository exists.
       at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
       at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:226:113)
       at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:30281:17)
