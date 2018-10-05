@@ -1,29 +1,5 @@
 export default {
   Input: {
-    height: "64px",
-    fontSize: "16px",
-    fontWeight: 400,
-    background: {
-      normal: "#FFFFFF",
-      disabled: "#FFFFFF",
-      error: "#FFEBEB"
-    },
-    border: {
-      normal: "1px solid #ABADB5",
-      disabled: "1px solid #ABADB5",
-      error: "1px solid #FF3C21"
-    },
-    borderRadius: "2px",
-    color: {
-      normal: "#212C42",
-      disabled: "#212C42",
-      error: "#212C42"
-    },
-    placeholder: {
-      normal: "#ACADB5",
-      disabled: "#ACADB5",
-      error: "#ACADB5"
-    },
     Placeholder: {
       fontWeight: 200,
       main: {
