@@ -25,6 +25,7 @@ import { Input } from  "@crpt/react-input";
 | placeholder: String | Placeholder value. |  `<Input placeholder="Имя пользователя" />` |
 | onChange: Function | Callback for change event. |  `<Input onChange={val => alert(val)} />` |
 | onUpdate: Function | Fires on enter press or blur. |  `<Input onUpdate={val => alert(val)} />` |
+| onEnterKey: Function | Fires on enter key press. |  `<Input onEnterKey={val => alert(val)} />` |
 | type: String | Input type attribute. For example type="text" and type="password".  |  `<Input type="password" />` |
 | rightIcon: String | Right icon. |  `<Input rightIcon={<Icon type="calendar"/>} />` |
 | mask: String | Input mask. | `<Input mask="+7 (999) 999-99-99" />` |
