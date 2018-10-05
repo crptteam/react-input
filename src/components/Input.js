@@ -50,6 +50,7 @@ class Input extends Component {
   onKeyPress(e) {
     if (e.charCode === 13 || e.keyCode === 13 || e.key == 'Enter') {
       this.props.onUpdate && this.props.onUpdate(this.state.value);
+      this.props.onEnterKey && this.props.onEnterKey(this.state.value);
     }
   }
 
@@ -158,6 +159,7 @@ Input.propTypes = {
   defaultValue: PropTypes.string,
   isError: PropTypes.bool,
   onUpdate: PropTypes.func,
+  onEnterKey: PropTypes.func,
   rightIcon: PropTypes.any,
   mask: PropTypes.string,
   validate: PropTypes.func
