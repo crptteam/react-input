@@ -98,8 +98,10 @@ class Input extends Component {
   componentDidUpdate(prevProps) {
     const { defaultValue } = this.props;
     if (defaultValue !== prevProps.defaultValue) {
+      const isFocused = defaultValue ? true : false;
       this.setState({
-        value: defaultValue
+        value: defaultValue,
+        isFocused,
       });
     }
   }
