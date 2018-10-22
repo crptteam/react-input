@@ -496,7 +496,7 @@ class App extends React.Component {
           disabled={this.state.isDisabled}
           theme={theme}
           placeholder="Телефон"
-          validate={val => hasOnlyDigits(val)}
+          mask="+7 (999) 999-99-99"
           onChange={e => console.log(e)}
         />
 
