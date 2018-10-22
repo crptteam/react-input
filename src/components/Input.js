@@ -22,6 +22,7 @@ class Input extends Component {
 
     this.state = {
       isFocused: !!value.length,
+      isClicked: false,
       value
     };
 
@@ -33,6 +34,8 @@ class Input extends Component {
     this.onBlur = this.onBlur.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onKeyPress = this.onKeyPress.bind(this);
+    this.onHover = this.onHover.bind(this);
+    this.onLeave = this.onLeave.bind(this);
   }
 
   componentDidMount() {
@@ -64,7 +67,8 @@ class Input extends Component {
 
   onFocus(e) {
     this.setState({
-      isFocused: true
+      isFocused: true,
+      isClicked: true,
     });
 
     this.props.onFocus && this.props.onFocus(this.state.value);
@@ -73,7 +77,8 @@ class Input extends Component {
   onBlur(e) {
     if (!this.state.value.length) {
       this.setState({
-        isFocused: false
+        isFocused: false,
+        isClicked: false,
       });
     }
 
@@ -93,6 +98,22 @@ class Input extends Component {
     this.setState({
       value
     });
+  }
+
+  onHover(e) {
+    if (this.props.mask) {
+      this.setState({
+        isFocused: true,
+      });
+    }
+  }
+
+  onLeave(e) {
+    if (this.props.mask && !this.state.isClicked && !this.state.value.length) {
+      this.setState({
+        isFocused: false,
+      });
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -144,6 +165,8 @@ class Input extends Component {
             innerRef={el => (this.input = el)}
             theme={this.props.theme}
             component="Input"
+            onMouseEnter={this.onHover}
+            onMouseLeave={this.onLeave}
           />
 
           {rIcon}
