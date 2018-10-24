@@ -59,7 +59,8 @@ class Input extends Component {
 
   clear() {
     this.setState({
-      value: ''
+      value: '',
+      isFocused: false,
     });
     this.props.onUpdate && this.props.onUpdate('');
     this.props.onChange && this.props.onChange('');
