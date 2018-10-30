@@ -495,9 +495,13 @@ class App extends React.Component {
           isError={this.state.isError}
           disabled={this.state.isDisabled}
           theme={theme}
-          placeholder="Телефон"
-          mask="+7 (999) 999-99-99"
-          onChange={e => console.log(e)}
+          placeholder="Очень длинный плейсхолдер, который должен весь влезать в инпут"
+        />
+        <Input
+          isError={this.state.isError}
+          disabled={this.state.isDisabled}
+          theme={theme}
+          placeholder="Короткий плейсхолдер"
         />
 
         <div>
