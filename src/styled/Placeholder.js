@@ -7,13 +7,13 @@ import defaultTheme from "../theme/defaultTheme";
 const Elem = styled.div`
   display: block;
   position: absolute;
-  height: ${props => props.height};
   line-height: ${props => props.height};
   font-size: ${props => props.fontSize};
   color: ${props => props.color};
   font-weight: ${props => props.fontWeight};
-  top: ${props => props.top};
   font-family: ${props => props.fontFamily};
+  top: ${props => (props.focused ? '30%' : '50%')};
+  transform: translateY(-50%);
   transition: all 0.3s ease;
 `;
 
