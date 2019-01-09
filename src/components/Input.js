@@ -125,6 +125,7 @@ class Input extends Component {
         value: defaultValue,
         isFocused,
       });
+      this.props.onChange && this.props.onChange(defaultValue);
     }
   }
 
