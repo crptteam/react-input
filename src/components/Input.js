@@ -169,6 +169,7 @@ class Input extends Component {
             component="Input"
             onMouseEnter={this.onHover}
             onMouseLeave={this.onLeave}
+            autoComplete="off"
           />
 
           {rIcon}
