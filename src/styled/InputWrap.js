@@ -13,6 +13,10 @@ const Elem = styled.label`
   box-sizing: border-box;
   background: ${props => props.background};
   border: ${props => props.border};
+  border-left: ${props => props.borderLeft};
+  border-top: ${props => props.borderTop};
+  border-right: ${props => props.borderRight};
+  border-bottom: ${props => props.borderBottom};
   box-sizing: border-box;
   border-radius: ${props => props.borderRadius};
   padding-left: ${props => props.paddingLeft};
