@@ -29,3 +29,7 @@ export function innerMerge(obj, ...others) {
 export function hasOnlyDigits(value) {
   return /^-{0,1}\d+$/.test(value);
 }
+
+export const toStyled = (name, target) => props => (
+  name in props ? `${target}: ${props[name]};` : ''
+);
