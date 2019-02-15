@@ -29,6 +29,7 @@ import { Input } from  "@crpt/react-input";
 | type: String | Input type attribute. For example type="text" and type="password".  |  `<Input type="password" />` |
 | rightIcon: String | Right icon. |  `<Input rightIcon={<Icon type="calendar"/>} />` |
 | mask: String | Input mask. | `<Input mask="+7 (999) 999-99-99" />` |
+| maskOptions: Object | Input mask options. | `<Input mask="+7 (999) 999-99-99" maskOptions={{numericInput: true, placeholder: '0'}} />` |
 
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
