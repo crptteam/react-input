@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Inputmask from 'inputmask';
-import { withTheme } from 'styled-components';
-import InputWrap from '../styled/InputWrap';
-import InputContentWrap from '../styled/InputContentWrap';
-import InputElem from '../styled/InputElem';
-import Placeholder from '../styled/Placeholder';
-import RightIconWrap from '../styled/RightIconWrap';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Inputmask from "inputmask";
+import { withTheme } from "styled-components";
+import InputWrap from "../styled/InputWrap";
+import InputContentWrap from "../styled/InputContentWrap";
+import InputElem from "../styled/InputElem";
+import Placeholder from "../styled/Placeholder";
+import RightIconWrap from "../styled/RightIconWrap";
 
-import defaultTheme from '../theme/defaultTheme';
+import defaultTheme from "../theme/defaultTheme";
 
 class Input extends Component {
   input;
@@ -18,7 +18,7 @@ class Input extends Component {
   constructor(props) {
     super(props);
 
-    const value = this.props.defaultValue || '';
+    const value = this.props.defaultValue || "";
 
     this.state = {
       isFocused: !!value.length,
@@ -27,7 +27,11 @@ class Input extends Component {
     };
 
     if (this.props.mask) {
-      this.im = new Inputmask(this.props.mask);
+      const opts = this.props.maskOptions || {};
+      this.im = new Inputmask({
+        mask: this.props.mask,
+        ...opts
+      });
     }
 
     this.onFocus = this.onFocus.bind(this);
@@ -51,7 +55,7 @@ class Input extends Component {
   }
 
   onKeyPress(e) {
-    if (e.charCode === 13 || e.keyCode === 13 || e.key == 'Enter') {
+    if (e.charCode === 13 || e.keyCode === 13 || e.key == "Enter") {
       this.props.onUpdate && this.props.onUpdate(this.state.value);
       this.props.onEnterKey && this.props.onEnterKey(this.state.value);
     }
@@ -59,17 +63,17 @@ class Input extends Component {
 
   clear() {
     this.setState({
-      value: '',
-      isFocused: false,
+      value: "",
+      isFocused: false
     });
-    this.props.onUpdate && this.props.onUpdate('');
-    this.props.onChange && this.props.onChange('');
+    this.props.onUpdate && this.props.onUpdate("");
+    this.props.onChange && this.props.onChange("");
   }
 
   onFocus(e) {
     this.setState({
       isFocused: true,
-      isClicked: true,
+      isClicked: true
     });
 
     this.props.onFocus && this.props.onFocus(this.state.value);
@@ -79,7 +83,7 @@ class Input extends Component {
     if (!this.state.value.length) {
       this.setState({
         isFocused: false,
-        isClicked: false,
+        isClicked: false
       });
     }
 
@@ -104,7 +108,7 @@ class Input extends Component {
   onHover(e) {
     if (this.props.mask) {
       this.setState({
-        isFocused: true,
+        isFocused: true
       });
     }
   }
@@ -112,7 +116,7 @@ class Input extends Component {
   onLeave(e) {
     if (this.props.mask && !this.state.isClicked && !this.state.value.length) {
       this.setState({
-        isFocused: false,
+        isFocused: false
       });
     }
   }
@@ -123,7 +127,7 @@ class Input extends Component {
       const isFocused = defaultValue ? true : false;
       this.setState({
         value: defaultValue,
-        isFocused,
+        isFocused
       });
       this.props.onChange && this.props.onChange(defaultValue);
     }
@@ -160,7 +164,7 @@ class Input extends Component {
             onChange={this.onChange}
             onBlur={this.onBlur}
             onKeyPress={this.onKeyPress}
-            value={this.state.value ? this.state.value : ''}
+            value={this.state.value ? this.state.value : ""}
             disabled={disabled}
             type={type}
             name={name}
@@ -190,18 +194,19 @@ Input.propTypes = {
   onEnterKey: PropTypes.func,
   rightIcon: PropTypes.any,
   mask: PropTypes.string,
-  validate: PropTypes.func
+  validate: PropTypes.func,
+  maskOptions: PropTypes.object,
 };
 
 Input.defaultProps = {
   disabled: false,
-  placeholder: '',
-  defaultValue: '',
+  placeholder: "",
+  defaultValue: "",
   isError: false,
   theme: defaultTheme,
   mask: null
 };
 
-Input.displayName = 'Input';
+Input.displayName = "Input";
 
 export default withTheme(Input);

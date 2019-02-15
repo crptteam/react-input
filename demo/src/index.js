@@ -91,7 +91,8 @@ class App extends React.Component {
     this.state = {
       theme,
       isError: false,
-      isDisabled: false
+      isDisabled: false,
+      value: ''
     };
   }
 
@@ -495,6 +496,10 @@ class App extends React.Component {
           isError={this.state.isError}
           disabled={this.state.isDisabled}
           theme={theme}
+          mask={'9999-9999-9999-9999'}
+          onFocus={e=>{
+            console.log('on focus',e);
+          }}
           placeholder="Очень длинный плейсхолдер, который должен весь влезать в инпут"
         />
         <Input
