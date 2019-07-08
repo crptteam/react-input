@@ -43,9 +43,6 @@ class Input extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      isFocused: this.input.value && this.input.value.length
-    });
     this.props.onRef && this.props.onRef(this);
     if (this.im) this.inputMask = this.im.mask(this.input);
   }
@@ -123,7 +120,8 @@ class Input extends Component {
 
   componentDidUpdate(prevProps) {
     const { defaultValue } = this.props;
-    if (defaultValue !== prevProps.defaultValue) {
+    const { value } = this.state;
+    if (defaultValue !== prevProps.defaultValue && value !== defaultValue) {
       const isFocused = defaultValue ? true : false;
       this.setState({
         value: defaultValue,
@@ -143,6 +141,7 @@ class Input extends Component {
       onChange,
       onBlur,
       onFocus,
+      centered,
       ...otherProps
     } = this.props;
 
@@ -160,6 +159,7 @@ class Input extends Component {
         </Placeholder>
         <InputContentWrap>
           <InputElem
+            centered={centered}
             onFocus={this.onFocus}
             onChange={this.onChange}
             onBlur={this.onBlur}
@@ -189,6 +189,7 @@ Input.propTypes = {
   onChange: PropTypes.func,
   placeholder: PropTypes.any,
   defaultValue: PropTypes.string,
+  centered: PropTypes.bool,
   isError: PropTypes.bool,
   onUpdate: PropTypes.func,
   onEnterKey: PropTypes.func,
@@ -204,7 +205,8 @@ Input.defaultProps = {
   defaultValue: "",
   isError: false,
   theme: defaultTheme,
-  mask: null
+  mask: null,
+  centered: false
 };
 
 Input.displayName = "Input";

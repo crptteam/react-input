@@ -509,6 +509,13 @@ class App extends React.Component {
           placeholder="Короткий плейсхолдер"
         />
 
+        <Input
+          isError={this.state.isError}
+          disabled={this.state.isDisabled}
+          theme={theme}
+          centered
+        />
+
         <div>
           <pre>{JSON.stringify(this.state.theme, null, 4)}</pre>
         </div>
